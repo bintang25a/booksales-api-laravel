@@ -10,11 +10,11 @@ class AuthorSeeder extends Seeder
     public function run()
     {
         $authors = [
-            'J.K. Rowling',
-            'Stephen King',
-            'Agatha Christie',
-            'George Orwell',
-            'Jane Austen'
+            'Charles Solomon',
+            'Jessica Julius',
+            'Pete Docter',
+            'Jeff Kurtti',
+            'Kaliko Hurley'
         ];
 
         foreach ($authors as $author) {

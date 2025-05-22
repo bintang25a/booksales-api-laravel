@@ -65,11 +65,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
-    'timezone' => env('APP_TIMEZONE', 'UTC'),
-=======
     'timezone' => 'UTC',
->>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
 
     /*
     |--------------------------------------------------------------------------
