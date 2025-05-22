@@ -18,3 +18,4 @@ Route::post('/authors', [AuthorController::class, 'create']);
 
 Route::get('/books', [BookController::class, 'index']);
 Route::post('/books', [BookController::class, 'store']);
+Route::post('/books', [BookController::class, 'del']);
