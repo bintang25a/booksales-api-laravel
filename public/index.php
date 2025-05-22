@@ -1,5 +1,9 @@
 <?php
 
+<<<<<<< HEAD
+=======
+use Illuminate\Foundation\Application;
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
 use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
@@ -13,5 +17,12 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 require __DIR__.'/../vendor/autoload.php';
 
 // Bootstrap Laravel and handle the request...
+<<<<<<< HEAD
 (require_once __DIR__.'/../bootstrap/app.php')
     ->handleRequest(Request::capture());
+=======
+/** @var Application $app */
+$app = require_once __DIR__.'/../bootstrap/app.php';
+
+$app->handleRequest(Request::capture());
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)

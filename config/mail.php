@@ -85,6 +85,10 @@ return [
                 'smtp',
                 'log',
             ],
+<<<<<<< HEAD
+=======
+            'retry_after' => 60,
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
         ],
 
         'roundrobin' => [
@@ -93,6 +97,10 @@ return [
                 'ses',
                 'postmark',
             ],
+<<<<<<< HEAD
+=======
+            'retry_after' => 60,
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
         ],
 
     ],

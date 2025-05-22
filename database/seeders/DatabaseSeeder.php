@@ -19,5 +19,14 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+<<<<<<< HEAD
+=======
+
+        $this->call([
+            GenreSeeder::class,
+            AuthorSeeder::class,
+            BookSeeder::class,
+        ]);
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
     }
 }

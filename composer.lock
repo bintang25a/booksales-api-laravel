@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "626b9e7ddd47fb7eff9aaa53cce0c9ad",
+=======
+    "content-hash": "85c1d2065f70e38b0d6bf66559fb13c5",
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
     "packages": [
         {
             "name": "brick/math",
@@ -1056,6 +1060,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v11.44.7",
             "source": {
                 "type": "git",
@@ -1070,6 +1075,22 @@
             },
             "require": {
                 "brick/math": "^0.9.3|^0.10.2|^0.11|^0.12",
+=======
+            "version": "v12.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "2ef7fb183f18e547af4eb9f5a55b2ac1011f0b77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/2ef7fb183f18e547af4eb9f5a55b2ac1011f0b77",
+                "reference": "2ef7fb183f18e547af4eb9f5a55b2ac1011f0b77",
+                "shasum": ""
+            },
+            "require": {
+                "brick/math": "^0.11|^0.12",
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
                 "composer-runtime-api": "^2.2",
                 "doctrine/inflector": "^2.0.5",
                 "dragonmantank/cron-expression": "^3.4",
@@ -1084,20 +1105,31 @@
                 "fruitcake/php-cors": "^1.3",
                 "guzzlehttp/guzzle": "^7.8.2",
                 "guzzlehttp/uri-template": "^1.0",
+<<<<<<< HEAD
                 "laravel/prompts": "^0.1.18|^0.2.0|^0.3.0",
                 "laravel/serializable-closure": "^1.3|^2.0",
                 "league/commonmark": "^2.6",
+=======
+                "laravel/prompts": "^0.3.0",
+                "laravel/serializable-closure": "^1.3|^2.0",
+                "league/commonmark": "^2.7",
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
                 "league/flysystem": "^3.25.1",
                 "league/flysystem-local": "^3.25.1",
                 "league/uri": "^7.5.1",
                 "monolog/monolog": "^3.0",
+<<<<<<< HEAD
                 "nesbot/carbon": "^2.72.6|^3.8.4",
+=======
+                "nesbot/carbon": "^3.8.4",
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
                 "nunomaduro/termwind": "^2.0",
                 "php": "^8.2",
                 "psr/container": "^1.1.1|^2.0.1",
                 "psr/log": "^1.0|^2.0|^3.0",
                 "psr/simple-cache": "^1.0|^2.0|^3.0",
                 "ramsey/uuid": "^4.7",
+<<<<<<< HEAD
                 "symfony/console": "^7.0.3",
                 "symfony/error-handler": "^7.0.3",
                 "symfony/finder": "^7.0.3",
@@ -1110,6 +1142,20 @@
                 "symfony/routing": "^7.0.3",
                 "symfony/uid": "^7.0.3",
                 "symfony/var-dumper": "^7.0.3",
+=======
+                "symfony/console": "^7.2.0",
+                "symfony/error-handler": "^7.2.0",
+                "symfony/finder": "^7.2.0",
+                "symfony/http-foundation": "^7.2.0",
+                "symfony/http-kernel": "^7.2.0",
+                "symfony/mailer": "^7.2.0",
+                "symfony/mime": "^7.2.0",
+                "symfony/polyfill-php83": "^1.31",
+                "symfony/process": "^7.2.0",
+                "symfony/routing": "^7.2.0",
+                "symfony/uid": "^7.2.0",
+                "symfony/var-dumper": "^7.2.0",
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
                 "tijsverkoyen/css-to-inline-styles": "^2.2.5",
                 "vlucas/phpdotenv": "^5.6.1",
                 "voku/portable-ascii": "^2.0.2"
@@ -1173,6 +1219,7 @@
                 "league/flysystem-read-only": "^3.25.1",
                 "league/flysystem-sftp-v3": "^3.25.1",
                 "mockery/mockery": "^1.6.10",
+<<<<<<< HEAD
                 "orchestra/testbench-core": "^9.11.2",
                 "pda/pheanstalk": "^5.0.6",
                 "php-http/discovery": "^1.15",
@@ -1184,6 +1231,19 @@
                 "symfony/http-client": "^7.0.3",
                 "symfony/psr-http-message-bridge": "^7.0.3",
                 "symfony/translation": "^7.0.3"
+=======
+                "orchestra/testbench-core": "^10.0.0",
+                "pda/pheanstalk": "^5.0.6|^7.0.0",
+                "php-http/discovery": "^1.15",
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^10.5.35|^11.5.3|^12.0.1",
+                "predis/predis": "^2.3|^3.0",
+                "resend/resend-php": "^0.10.0",
+                "symfony/cache": "^7.2.0",
+                "symfony/http-client": "^7.2.0",
+                "symfony/psr-http-message-bridge": "^7.2.0",
+                "symfony/translation": "^7.2.0"
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
             },
             "suggest": {
                 "ably/ably-php": "Required to use the Ably broadcast driver (^1.0).",
@@ -1209,6 +1269,7 @@
                 "mockery/mockery": "Required to use mocking (^1.6).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (^5.0).",
                 "php-http/discovery": "Required to use PSR-7 bridging features (^1.15).",
+<<<<<<< HEAD
                 "phpunit/phpunit": "Required to use assertions and run tests (^10.5.35|^11.3.6|^12.0.1).",
                 "predis/predis": "Required to use the predis connector (^2.3).",
                 "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
@@ -1220,11 +1281,28 @@
                 "symfony/mailgun-mailer": "Required to enable support for the Mailgun mail transport (^7.0).",
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^7.0).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^7.0)."
+=======
+                "phpunit/phpunit": "Required to use assertions and run tests (^10.5.35|^11.5.3|^12.0.1).",
+                "predis/predis": "Required to use the predis connector (^2.3|^3.0).",
+                "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
+                "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^6.0|^7.0).",
+                "resend/resend-php": "Required to enable support for the Resend mail transport (^0.10.0).",
+                "symfony/cache": "Required to PSR-6 cache bridge (^7.2).",
+                "symfony/filesystem": "Required to enable support for relative symbolic links (^7.2).",
+                "symfony/http-client": "Required to enable support for the Symfony API mail transports (^7.2).",
+                "symfony/mailgun-mailer": "Required to enable support for the Mailgun mail transport (^7.2).",
+                "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^7.2).",
+                "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^7.2)."
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "11.x-dev"
+=======
+                    "dev-master": "12.x-dev"
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
                 }
             },
             "autoload": {
@@ -1267,7 +1345,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2025-04-25T12:40:47+00:00"
+=======
+            "time": "2025-05-20T15:10:44+00:00"
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
         },
         {
             "name": "laravel/prompts",
@@ -1329,6 +1411,73 @@
             "time": "2025-02-11T13:34:40+00:00"
         },
         {
+<<<<<<< HEAD
+=======
+            "name": "laravel/sanctum",
+            "version": "v4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sanctum.git",
+                "reference": "a360a6a1fd2400ead4eb9b6a9c1bb272939194f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/a360a6a1fd2400ead4eb9b6a9c1bb272939194f5",
+                "reference": "a360a6a1fd2400ead4eb9b6a9c1bb272939194f5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/console": "^11.0|^12.0",
+                "illuminate/contracts": "^11.0|^12.0",
+                "illuminate/database": "^11.0|^12.0",
+                "illuminate/support": "^11.0|^12.0",
+                "php": "^8.2",
+                "symfony/console": "^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.6",
+                "orchestra/testbench": "^9.0|^10.0",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^11.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Sanctum\\SanctumServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Sanctum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel Sanctum provides a featherweight authentication system for SPAs and simple APIs.",
+            "keywords": [
+                "auth",
+                "laravel",
+                "sanctum"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/sanctum/issues",
+                "source": "https://github.com/laravel/sanctum"
+            },
+            "time": "2025-04-23T13:03:38+00:00"
+        },
+        {
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
             "name": "laravel/serializable-closure",
             "version": "v2.0.4",
             "source": {
@@ -6119,6 +6268,7 @@
         },
         {
             "name": "laravel/sail",
+<<<<<<< HEAD
             "version": "v1.42.0",
             "source": {
                 "type": "git",
@@ -6129,6 +6279,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/2edaaf77f3c07a4099965bb3d7dfee16e801c0f6",
                 "reference": "2edaaf77f3c07a4099965bb3d7dfee16e801c0f6",
+=======
+            "version": "v1.43.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sail.git",
+                "reference": "71a509b14b2621ce58574274a74290f933c687f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/71a509b14b2621ce58574274a74290f933c687f7",
+                "reference": "71a509b14b2621ce58574274a74290f933c687f7",
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
                 "shasum": ""
             },
             "require": {
@@ -6178,7 +6340,11 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
+<<<<<<< HEAD
             "time": "2025-04-29T14:26:46+00:00"
+=======
+            "time": "2025-05-13T13:34:34+00:00"
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
         },
         {
             "name": "mockery/mockery",
@@ -6865,6 +7031,7 @@
         },
         {
             "name": "phpunit/phpunit",
+<<<<<<< HEAD
             "version": "11.5.19",
             "source": {
                 "type": "git",
@@ -6875,6 +7042,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0da1ebcdbc4d5bd2d189cfe02846a89936d8dda5",
                 "reference": "0da1ebcdbc4d5bd2d189cfe02846a89936d8dda5",
+=======
+            "version": "11.5.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "d565e2cdc21a7db9dc6c399c1fc2083b8010f289"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d565e2cdc21a7db9dc6c399c1fc2083b8010f289",
+                "reference": "d565e2cdc21a7db9dc6c399c1fc2083b8010f289",
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
                 "shasum": ""
             },
             "require": {
@@ -6897,7 +7076,11 @@
                 "sebastian/code-unit": "^3.0.3",
                 "sebastian/comparator": "^6.3.1",
                 "sebastian/diff": "^6.0.2",
+<<<<<<< HEAD
                 "sebastian/environment": "^7.2.0",
+=======
+                "sebastian/environment": "^7.2.1",
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
                 "sebastian/exporter": "^6.3.0",
                 "sebastian/global-state": "^7.0.2",
                 "sebastian/object-enumerator": "^6.0.1",
@@ -6946,7 +7129,11 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.19"
+=======
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.21"
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
             },
             "funding": [
                 {
@@ -6970,7 +7157,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2025-05-02T06:56:52+00:00"
+=======
+            "time": "2025-05-21T12:35:00+00:00"
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
         },
         {
             "name": "sebastian/cli-parser",
@@ -7349,6 +7540,7 @@
         },
         {
             "name": "sebastian/environment",
+<<<<<<< HEAD
             "version": "7.2.0",
             "source": {
                 "type": "git",
@@ -7359,13 +7551,29 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/855f3ae0ab316bbafe1ba4e16e9f3c078d24a0c5",
                 "reference": "855f3ae0ab316bbafe1ba4e16e9f3c078d24a0c5",
+=======
+            "version": "7.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/environment.git",
+                "reference": "a5c75038693ad2e8d4b6c15ba2403532647830c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/a5c75038693ad2e8d4b6c15ba2403532647830c4",
+                "reference": "a5c75038693ad2e8d4b6c15ba2403532647830c4",
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "phpunit/phpunit": "^11.0"
+=======
+                "phpunit/phpunit": "^11.3"
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
             },
             "suggest": {
                 "ext-posix": "*"
@@ -7401,15 +7609,37 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/environment/issues",
                 "security": "https://github.com/sebastianbergmann/environment/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/environment/tree/7.2.0"
+=======
+                "source": "https://github.com/sebastianbergmann/environment/tree/7.2.1"
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+<<<<<<< HEAD
                 }
             ],
             "time": "2024-07-03T04:54:44+00:00"
+=======
+                },
+                {
+                    "url": "https://liberapay.com/sebastianbergmann",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://thanks.dev/u/gh/sebastianbergmann",
+                    "type": "thanks_dev"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/sebastian/environment",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-05-21T11:55:47+00:00"
+>>>>>>> e31a002 (update untuk tugas laravel pertemuan 3)
         },
         {
             "name": "sebastian/exporter",
