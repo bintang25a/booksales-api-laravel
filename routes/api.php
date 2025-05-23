@@ -11,11 +11,19 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/genres', [GenreController::class, 'index']);
-Route::post('/genres', [GenreController::class, 'create']);
+Route::get('/genres/{id}', [GenreController::class, 'show']);
+Route::post('/genres', [GenreController::class, 'store']);
+Route::post('/genres/{id}', [GenreController::class, 'update']);
+Route::delete('/genres/{id}', [GenreController::class, 'destroy']);
 
 Route::get('/authors', [AuthorController::class, 'index']);
-Route::post('/authors', [AuthorController::class, 'create']);
+Route::get('/authors/{id}', [AuthorController::class, 'show']);
+Route::post('/authors', [AuthorController::class, 'store']);
+Route::post('/authors/{id}', [AuthorController::class, 'update']);
+Route::delete('/authors/{id}', [AuthorController::class, 'destroy']);
 
 Route::get('/books', [BookController::class, 'index']);
+Route::get('/books/{id}', [BookController::class, 'show']);
 Route::post('/books', [BookController::class, 'store']);
-Route::post('/books', [BookController::class, 'del']);
+Route::post('/books/{id}', [BookController::class, 'update']);
+Route::delete('/books/{id}', [BookController::class, 'destroy']);
