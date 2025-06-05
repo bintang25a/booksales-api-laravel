@@ -32,7 +32,7 @@ class BookController extends Controller
             'author_id' => 'required|exists:authors,id'
         ]);
 
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return response()->json([
                 'succes' => 'failed',
                 'message' => $validator->errors()
@@ -63,14 +63,13 @@ class BookController extends Controller
     {
         $book = Book::with('author', 'genre')->find($id);
 
-        if($book) {
+        if ($book) {
             return response()->json([
                 'succes' => 'true',
                 'message' => 'show book by id',
                 'data' => $book
             ], 200);
-        }
-        else {
+        } else {
             return response()->json([
                 'succes' => 'false',
                 'message' => 'data not found'
@@ -82,10 +81,10 @@ class BookController extends Controller
     {
         $book = Book::find($id);
 
-        if(!$book) {
+        if (!$book) {
             return response()->json([
-            'succes' => 'false',
-            'message' => 'data not found, try another id'
+                'succes' => 'false',
+                'message' => 'data not found, try another id'
             ], 404);
         }
 
@@ -99,7 +98,7 @@ class BookController extends Controller
             'author_id' => 'required|exists:authors,id'
         ]);
 
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return response()->json([
                 'succes' => 'failed',
                 'message' => $validator->errors()
@@ -115,11 +114,11 @@ class BookController extends Controller
             'author_id' => $request->author_id,
         ];
 
-        if($request->hasFile('cover_photo')) {
+        if ($request->hasFile('cover_photo')) {
             $image = $request->file('cover_photo');
             $image->store('books', 'public');
 
-            if($book->cover_photo) {
+            if ($book->cover_photo) {
                 Storage::disk('public')->delete('books/' . $book->cover_photo);
             }
 
@@ -139,8 +138,8 @@ class BookController extends Controller
     {
         $book = Book::find($id);
 
-        if($book) {
-            if($book->cover_photo) {
+        if ($book) {
+            if ($book->cover_photo) {
                 Storage::disk('public')->delete('books/' . $book->cover_photo);
             }
 
@@ -150,8 +149,7 @@ class BookController extends Controller
                 'succes' => 'true',
                 'message' => 'delete book succes'
             ], 200);
-        }
-        else {
+        } else {
             return response()->json([
                 'succes' => 'false',
                 'message' => 'data not found, delete failed'

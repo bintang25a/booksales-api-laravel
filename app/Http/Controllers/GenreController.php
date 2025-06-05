@@ -15,21 +15,23 @@ class GenreController extends Controller
      */
     public function index()
     {
-         $genres = Genre::all();
-         
-         return response()->json([
+        $genres = Genre::all();
+
+        return response()->json([
             "succes" => true,
             "message" => "Get All Resource",
             "data" => $genres
-         ], 200);
+        ], 200);
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string'
+            'name' => 'required|string',
+            'description' => 'required|string'
         ]);
 
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return response()->json([
                 'succes' => 'failed',
                 'message' => $validator->errors()
@@ -37,7 +39,8 @@ class GenreController extends Controller
         }
 
         $genres = Genre::create([
-            'name' => $request->name
+            'name' => $request->name,
+            'description' => $request->description
         ]);
 
         return response()->json([
@@ -51,14 +54,13 @@ class GenreController extends Controller
     {
         $genre = Genre::find($id);
 
-        if($genre) {
+        if ($genre) {
             return response()->json([
                 'succes' => 'true',
                 'message' => 'show genre by id',
                 'data' => $genre
             ], 200);
-        }
-        else {
+        } else {
             return response()->json([
                 'succes' => 'false',
                 'message' => 'data not found'
@@ -70,18 +72,19 @@ class GenreController extends Controller
     {
         $genre = Genre::find($id);
 
-        if(!$genre) {
+        if (!$genre) {
             return response()->json([
-            'succes' => 'false',
-            'message' => 'data not found, try another id'
+                'succes' => 'false',
+                'message' => 'data not found, try another id'
             ], 404);
         }
 
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string'
+            'name' => 'required|string',
+            'description' => 'required|string'
         ]);
 
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return response()->json([
                 'succes' => 'failed',
                 'message' => $validator->errors()
@@ -89,7 +92,8 @@ class GenreController extends Controller
         }
 
         $data = [
-            'name' => $request->name
+            'name' => $request->name,
+            'description' => $request->description
         ];
 
         $genre->update($data);
@@ -105,7 +109,7 @@ class GenreController extends Controller
     {
         $genre = Genre::find($id);
 
-        if($genre) {
+        if ($genre) {
             $genre->delete();
 
             return response()->json([
@@ -113,8 +117,7 @@ class GenreController extends Controller
                 'data' => $genre,
                 'message' => 'delete genre succes'
             ], 200);
-        }
-        else {
+        } else {
             return response()->json([
                 'succes' => 'false',
                 'message' => 'data not found, delete failed'

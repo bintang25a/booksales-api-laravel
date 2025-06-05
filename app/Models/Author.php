@@ -10,9 +10,10 @@ class Author extends Model
     use HasFactory;
 
     protected $table = 'authors';
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'bio', 'photo'];
 
-    public function books() {
+    public function books()
+    {
         return $this->hasMany(Book::class);
     }
 }

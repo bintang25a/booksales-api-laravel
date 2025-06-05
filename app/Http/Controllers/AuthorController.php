@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Author;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class AuthorController extends Controller
 {
@@ -12,9 +13,9 @@ class AuthorController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {     
+    {
         $authors = Author::all();
-         
+
         return response()->json([
             "succes" => true,
             "message" => "Get All Resource",
@@ -22,20 +23,28 @@ class AuthorController extends Controller
         ], 200);
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string'
+            'name' => 'required|string',
+            'bio' => 'required|string',
+            'photo' => 'image|mimes:jpeg,jpg,png|max:4096'
         ]);
 
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return response()->json([
                 'succes' => 'failed',
                 'message' => $validator->errors()
             ], 422);
         }
 
+        $photo = $request->file('photo');
+        $photo->store('authors', 'public');
+
         $authors = Author::create([
-            'name' => $request->name
+            'name' => $request->name,
+            'bio' => $request->bio,
+            'photo' => $photo->hashName()
         ]);
 
         return response()->json([
@@ -49,14 +58,13 @@ class AuthorController extends Controller
     {
         $author = Author::find($id);
 
-        if($author) {
+        if ($author) {
             return response()->json([
                 'succes' => 'true',
                 'message' => 'show author by id',
                 'data' => $author
             ], 200);
-        }
-        else {
+        } else {
             return response()->json([
                 'succes' => 'false',
                 'message' => 'data not found'
@@ -68,18 +76,20 @@ class AuthorController extends Controller
     {
         $author = Author::find($id);
 
-        if(!$author) {
+        if (!$author) {
             return response()->json([
-            'succes' => 'false',
-            'message' => 'data not found, try another id'
+                'succes' => 'false',
+                'message' => 'data not found, try another id'
             ], 404);
         }
 
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string'
+            'name' => 'required|string',
+            'bio' => 'required|string',
+            'photo' => 'image|mimes:jpeg,jpg,png|max:4096'
         ]);
 
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return response()->json([
                 'succes' => 'failed',
                 'message' => $validator->errors()
@@ -87,8 +97,20 @@ class AuthorController extends Controller
         }
 
         $data = [
-            'name' => $request->name
+            'name' => $request->name,
+            'bio' => $request->bio
         ];
+
+        if ($request->hasFile('photo')) {
+            $photo = $request->file('photo');
+            $photo->store('authors', 'public');
+
+            if ($author->photo) {
+                Storage::disk('public')->delete('authors/' . $author->photo);
+            }
+
+            $data['photo'] = $photo->hashName();
+        }
 
         $author->update($data);
 
@@ -103,7 +125,11 @@ class AuthorController extends Controller
     {
         $author = Author::find($id);
 
-        if($author) {
+        if ($author) {
+            if ($author->photo) {
+                Storage::disk('public')->delete('authors/' . $author->photo);
+            }
+
             $author->delete();
 
             return response()->json([
@@ -111,8 +137,7 @@ class AuthorController extends Controller
                 'data' => $author,
                 'message' => 'delete author succes'
             ], 200);
-        }
-        else {
+        } else {
             return response()->json([
                 'succes' => 'false',
                 'message' => 'data not found, delete failed'
